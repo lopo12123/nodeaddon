@@ -29,4 +29,10 @@ impl ImageImpl {
             Err(_) => None,
         }
     }
+
+    /// 将 ppm buffer 转换为 png buffer, 失败则返回 None
+    pub fn ppm_buffer2png_buffer(ppm_buffer: Vec<u8>) -> Option<Vec<u8>> {
+        // TODO
+        None
+    }
 }
