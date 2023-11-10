@@ -5,5 +5,8 @@
 
 export function sum(a: number, b: number): number
 export class ImageImpl {
+  /** 将 ppm 文件转换为 png 文件并写入到指定路径, 成功则返回 true */
   static ppmFile2PngFile(ppmPath: string, pngPath: string): boolean
+  /** 将 ppm 文件转换为 png buffer, 失败则返回 None */
+  static ppmFile2PngBuffer(ppmPath: string): Array<number> | null
 }
