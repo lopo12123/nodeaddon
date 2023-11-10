@@ -93,8 +93,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: bindings-${{ matrix.settings.target }}
-          path: ${{ env.APP_NAME }}.*.node
+          name: assets-bundle
+#          name: bindings-${{ matrix.settings.target }}
+          path: |
+            ${{ env.APP_NAME }}.*.node
+            index.d.ts
+            index.js
           if-no-files-found: error
 #  test-macOS-windows-binding:
 #    name: Test bindings on ${{ matrix.settings.target }} - node@${{ matrix.node }}
